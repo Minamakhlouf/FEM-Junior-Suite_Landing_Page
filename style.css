@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap');
+
+* {
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Epilogue', sans-serif;
+    overflow-x: hidden; 
+}
+
+main {
+    background-color: hsl(30, 29%, 97%);
+}
+
+img {
+    width: 100%; 
+}
+
+nav {
+    padding: 24px 16px 0; 
+    margin-bottom: 76px; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width: 770px) {
+    nav {
+        margin-bottom: 55px; 
+        padding: 40px 40px 0; 
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    nav {
+        margin: 0 auto; 
+        padding: 50px 0 67px; 
+        max-width: 1110px; 
+    }
+}
+
+.btn {
+    font-size: 14px; 
+    line-height: 1.71;
+    padding: 12px 16px; 
+    transition: all 0.2s ease; 
+    cursor: pointer; 
+    border-radius: 5px; 
+}
+
+.btn--dark {
+    background-color: hsl(219, 43%, 16%);
+    color: white; 
+    border: none; 
+}
+
+.btn--light:hover {
+    background-color: hsl(219, 43%, 16%);
+    color: white; 
+}
+
+.btn--dark:hover {
+    background: linear-gradient(135deg, rgb(203, 48, 227), 75%, rgb(255, 168, 78));
+}
+
+/* Hero Grid */ 
+
+.hero-grid {
+    margin: 0 16px 56px; 
+    display: grid; 
+    gap: 55px; 
+}
+
+.hero__text {
+    display: flex; 
+    flex-direction: column;
+    gap: 40px; 
+    align-items: flex-start;
+}
+
+
+h1 {
+    font-size: 38px; 
+    line-height: 1.15; 
+    font-weight: 400; 
+    letter-spacing: -.53px;
+}
+
+.hero__bolded-head {
+    font-weight: 700; 
+}
+
+.hero__bolded-head--positioned {
+    position: relative; 
+}
+
+.hero__curved-line {
+    position: absolute; 
+    top: -100%; 
+    left: 0; 
+    width: 100%; 
+}
+
+.hero-grid p {
+    font-size: 16px; 
+    line-height: 1.75; 
+    letter-spacing: .09px;
+}
+
+@media screen and (min-width: 770px) {
+    .hero-grid {
+        margin-left: 40px; 
+        margin-right: 40px; 
+        display: grid; 
+        grid-template-columns: repeat(10, 10%);
+        gap: 88px 0; 
+    }
+    .hero__text {
+        grid-column: 1/8; 
+        grid-row: 1/2; 
+        z-index: 4; 
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+    }
+    .hero__image {
+        grid-column: 7/11; 
+        grid-row: 1/2; 
+        z-index: 1; 
+    }
+    .info {
+        grid-row: 2/3; 
+        grid-column: 1/11; 
+    }
+    .hero-grid p {
+        max-width: 350px; 
+    }
+    h1 {
+        font-size: 56px; 
+    }
+}
+
+/* Info */ 
+
+.info {
+    text-align: center;
+    display: flex; 
+    flex-direction: column;
+    gap: 32px; 
+    margin-bottom: 56px; 
+}
+
+.info__value {
+    font-size: 48px; 
+    line-height: 1.16; 
+    font-weight: 700; 
+}
+
+.info__key {
+    font-size: 16px; 
+    line-height: 1.62; 
+    letter-spacing: 2.5px;
+}
+
+@media screen and (min-width: 550px) {
+    .info {
+        flex-direction: row;
+        margin-left: 40px; 
+        margin-right: 40px; 
+        gap: 10px; 
+    }
+    .info__stats {
+        width: 100%; 
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-grid {
+        max-width: 1110px; 
+        margin-left: auto; 
+        margin-right: auto;
+        grid-template-columns: repeat(5, 20%); 
+        margin-bottom: 160px; 
+    }
+    .hero__text {
+        grid-column: 1/4; 
+    }
+    h1 {
+        font-size: 72px; 
+    }
+    .hero__image {
+        grid-column: 3/5; 
+    }
+    .info {
+        grid-column: 5/6; 
+        grid-row: 1/2; 
+        flex-direction: column;
+        align-self: center;
+        gap: 63px; 
+    }
+}
+
+/* Testimonial */ 
+
+.grid2 {
+    display: grid; 
+}
+
+.testimonial__content-container {
+    text-align: center;
+    color: white; 
+    z-index: 4; 
+    display: grid; 
+    grid-row: 1/3; 
+    grid-column: 1/2;
+}
+
+.testimonial__text-content {
+    background-color: hsl(219, 43%, 16%);
+    border-radius: 25px; 
+    grid-row: 2/8; 
+    grid-column: 1/2; 
+    padding: 190px 58px 64px; 
+}
+
+.testimonial__image {
+    width: 252px; 
+    margin: 0 auto; 
+    z-index: 4; 
+    grid-row: 1/3; 
+    grid-column: 1/2; 
+}
+
+.testimonial__pattern {
+    width: 50px; 
+    margin: 40px auto; 
+}
+
+.testimonial__heading {
+    font-weight: 400; 
+    margin: 40px auto; 
+    font-size: 40px; 
+    line-height: 1.2; 
+}
+
+.testimonial__heading span {
+    font-weight: 700; 
+}
+
+.testimonial__paragraph {
+    font-size: 18px; 
+    letter-spacing: .09px;
+    line-height: 1.77; 
+}
+
+.testimonial__mini-container {
+    margin-top: 40px; 
+    font-size: 16px; 
+    line-height: 1.62;
+}
+
+.testimonial__name {
+    font-weight: 700; 
+}
+
+@media screen and (min-width: 770px) {
+    .testimonial__content-container {
+        margin-right: 40px; 
+        margin-left: 40px; 
+        border-radius: 15px; 
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .testimonial__content-container {
+        max-width: 1110px; 
+        margin-right: auto; 
+        margin-left: auto; 
+        background-color: hsl(219, 43%, 16%);
+        padding: 88px 125px; 
+        position: relative; 
+        display: block; 
+    }
+    .testimonial__image {
+        position: absolute; 
+        left: 112px; 
+        bottom: 0; 
+        width: 375px; 
+    }
+    .testimonial__text-content {
+        padding: 0;
+        padding-left: 50px; 
+        width: 50%; 
+        margin-left: auto; 
+        position: relative; 
+        text-align: left;
+    }
+    .testimonial__pattern {
+        position: absolute; 
+        left: -10%; 
+    }
+}
+
+/* Footer */ 
+
+.footer-content {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    gap: 33px; 
+    padding: 50px 0; 
+}
+
+.icon-container {
+    display: flex; 
+    gap: 20px; 
+}
+
+.icon {
+    cursor: pointer; 
+}
+
+@media screen and (min-width: 770px) { 
+    footer {
+        background-color:  hsl(30, 35%, 93%);
+        grid-row: 2/5; 
+        grid-column: 1/2; 
+        padding: 350px 40px 72px; 
+    }
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end; 
+        max-width: 1110px; 
+        margin: 0 auto; 
+    }
+}
